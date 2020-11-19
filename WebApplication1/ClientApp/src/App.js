@@ -16,10 +16,10 @@ class App extends React.Component {
 
     handleSubmit(data) {
 
-           const requestOptions = {
+        const requestOptions = {
              method: 'POST',
              headers: { 'Content-Type': 'application/json' },
-               body: JSON.stringify({ "Username": data.Username, "Password": data.Password })
+            body: JSON.stringify({ "Username": data.Username, "Password": data.Password })
         };
 
          fetch(ENDPOINT, requestOptions)
