@@ -47,14 +47,14 @@ class MainPage extends React.Component {
 
     render() {
         const listItems = this.state.TweetArray.map((number) =>
-            <Tweet data={number}></Tweet>
+            <Tweet data={number} key={number.id}></Tweet>
         );
 
         return (<div>
-            <div id="myDIV" class="header">
+            <div id="myDIV" className="header">
                 <h2>Welcome to Fake Twitter: {this.props.username}</h2>
                 <input type="text" id="myInput" placeholder="Please Enter some text to tweet..." value={this.state.value} onChange={this.handleChange} />
-                <span onClick={this.AddNew} class="addBtn">Add</span>
+                <span onClick={this.AddNew} className="addBtn">Add</span>
             </div>
 
             <ul id="myUL">
